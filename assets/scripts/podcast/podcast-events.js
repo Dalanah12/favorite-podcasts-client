@@ -23,7 +23,26 @@ const onGetAllPods = function (event) {
     .catch(ui.getAllPodsFailure)
 }
 
+const onDeletePod = function (event) {
+  event.preventDefault()
+  const podcastId = $(event.target).data('id')
+  console.log(event)
+  api.deletePodcast(podcastId)
+    .then(() => ui.deletePodcastSuccess(podcastId))
+    .catch(ui.deletePodcastFailure)
+}
+
+const onUpdateRate = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.updateRate(data)
+    .then(ui.onUpdateRateSuccess)
+    .catch(ui.onUpdateRateFailure)
+}
 module.exports = {
   onAddPodcast,
-  onGetAllPods
+  onGetAllPods,
+  onDeletePod,
+  onUpdateRate
 }

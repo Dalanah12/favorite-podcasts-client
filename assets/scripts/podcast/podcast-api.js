@@ -32,7 +32,34 @@ const getAllPods = function (data) {
   })
 }
 
+const updateRate = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/podcasts/' + data.podcast.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      podcast: {
+        rating: data.podcast.rating
+      }
+    }
+  })
+}
+
+const deletePodcast = function (podcastId) {
+  return $.ajax({
+    url: config.apiUrl + '/podcasts' + podcastId,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   addPodcast,
-  getAllPods
+  getAllPods,
+  deletePodcast,
+  updateRate
 }

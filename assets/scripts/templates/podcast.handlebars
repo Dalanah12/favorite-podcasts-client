@@ -1,11 +1,16 @@
 
 {{#each podcasts as |podcast|}}
-{{log podcast}}
 <section class="show-pods" data-id="{{podcast._id}}">
-  <div>Title:</div>{{podcast.title}}
-  <div>Host(s):</div>{{podcast.hosts}}
-  <div>Topic:</div>{{podcast.topic}}
-  <div>Current Rating:</div>{{podcast.rating}}
+  <div><h3>Title:</h3><h5>{{podcast.title}}</h5></div>
+  <div><h3>Host(s):</h3><h5>{{podcast.hosts}}</h5></div>
+  <div><h3>Topic:</h3><h5>{{podcast.topic}}</h5></div>
+  <div><h3>Rating:</h3><h5>{{podcast.rating}}</h5></div>
+  <button type="submit" class="btn btn-danger">Delete</button>
+  <form id="update">
+    <h4>Change Rating</h4>
+    <input required type="text" placeholder="New Rating" name="podcast[rating]">
+    <button type="submit">Change</button>
+  </form>
 </section>
 
 {{/each}}

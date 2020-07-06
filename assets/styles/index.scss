@@ -2,20 +2,80 @@
 
 #sign-up {
   text-align: center;
+  font-family: 'Michroma', sans-serif;
+  color: #DD3FE8
 }
 
 #sign-in {
   text-align: center;
+  font-family: 'Michroma', sans-serif;
+  color: #DD3FE8
 }
 
 #change-password {
   text-align: center;
+  font-family: 'Michroma', sans-serif;
+  color: #DD3FE8
 }
 
 #sign-out {
+  text-align: center;
+  font-family: 'Michroma', sans-serif;
+}
+
+#add-podcast {
+  text-align: center;
+  font-family: 'Michroma', sans-serif;
+  color: #DD3FE8
+}
+
+h2 {
+  font-family: 'Freckle Face', cursive;
+}
+
+#get-podcasts {
+  text-align: center;
+  font-family: 'Michroma', sans-serif;
+}
+
+#clear-pods {
+  text-align: center;
+  font-family: 'Michroma', sans-serif;
+}
+
+#update {
+  text-align: center;
+  font-family: 'Michroma', sans-serif;
+}
+
+#message, #pod-message {
+  color: green;
+  font-family: 'Freckle Face', cursive;
+}
+
+.content {
   text-align: center;
 }
 
 h1, h2 {
   text-align: center;
 }
+
+p, h3, h4 {
+  font-family: 'Michroma', sans-serif;
+}
+
+h1 {
+  font-family: 'Freckle Face', cursive;
+  color: #DD3FE8
+}
+
+body {
+  background-color: #EACDEC
+}
+// body {
+//   background-image: url(public/podcast2.jpg);
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   background-size: 100%
+// }
