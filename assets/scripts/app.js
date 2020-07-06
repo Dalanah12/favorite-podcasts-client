@@ -1,6 +1,7 @@
 'use strict'
 
 const authEvents = require('./auth/events')
+const podEvents = require('./podcast/podcast-events')
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -12,8 +13,11 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#auth-two').hide()
+  $('#add-podcast').on('submit', podEvents.onAddPodcast)
 })
 
 module.exports = {
-  authEvents
+  authEvents,
+  podEvents
 }

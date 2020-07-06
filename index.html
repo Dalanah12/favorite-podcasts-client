@@ -14,8 +14,9 @@
     <body>
       <h1>Favorite Podcasts App</h1>
       <p id="message"></p>
+      <p id="pod-message"></p>
       <main>
-        <section>
+        <section id="auth-one">
           <form id="sign-up">
             <h3>Sign Up</h3>
             <input required type="text" placeholder="Email" name="credentials[email]">
@@ -23,8 +24,6 @@
             <input required type="password" placeholder="Confirm Password" name="credentials[password_confirmation]">
             <button type="submit">Sign Up</button>
           </form>
-        </section>
-        <section>
           <form id="sign-in">
             <h3>Sign In</h3>
             <input required type="text" placeholder="Email" name="credentials[email]">
@@ -32,19 +31,27 @@
             <button type="submit">Sign In</button>
           </form>
         </section>
-        <section>
+        <section id="auth-two">
+        <form id="change-password">
+          <h3>Change Password</h3>
+          <input required type="password" placeholder="Old Password" name="credentials[old]">
+          <input required type="password" placeholder="New Password" name="credentials[new]">
+          <button type="submit">Change</button>
+        </form>
           <form id="sign-out">
             <button type="submit">Sign Out</button>
           </form>
         </section>
-        <section>
-          <form id="change-password">
-            <h3>Change Password</h3>
-            <input required type="password" placeholder="Old Password" name="credentials[old]">
-            <input required type="password" placeholder="New Password" name="credentials[new]">
-            <button type="submit">Change</button>
-          </form>
-        </section>
       </main>
+      <section id="pod-one">
+        <form id="add-podcast">
+        <h2>What are you listening to?</h2>
+        <input required type="text" placeholder="Title" name="podcast[title]">
+        <input required type="text" placeholder="Host(s)" name="podcast[hosts]">
+        <input required type="text" placeholder="Topic" name="podcast[topic]">
+        <input required type="text" placeholder="Rating" name="podcast[rating]">
+        <button type="submit">Add!</button>
+      </form>
+      </section>
     </body>
 </html>
