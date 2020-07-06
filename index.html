@@ -13,18 +13,19 @@
     </head>
     <body>
       <h1>Favorite Podcasts App</h1>
+      <p id="message"></p>
       <main>
         <section>
-          <form id-"sign-up">
+          <form id="sign-up">
             <h3>Sign Up</h3>
             <input required type="text" placeholder="Email" name="credentials[email]">
             <input required type="password" placeholder="Password" name="credentials[password]">
-            <input required type="password" placeholder="Password Confirmation" name="credentials[password_confirmation]">
+            <input required type="password" placeholder="Confirm Password" name="credentials[password_confirmation]">
             <button type="submit">Sign Up</button>
           </form>
         </section>
         <section>
-          <form id-"sign-in">
+          <form id="sign-in">
             <h3>Sign In</h3>
             <input required type="text" placeholder="Email" name="credentials[email]">
             <input required type="password" placeholder="Password" name="credentials[password]">
@@ -37,10 +38,10 @@
           </form>
         </section>
         <section>
-          <form id-"change-password">
+          <form id="change-password">
             <h3>Change Password</h3>
-            <input required type="text" placeholder="Old Password" name="credentials[oldpw]">
-            <input required type="password" placeholder="New Password" name="credentials[newpw">
+            <input required type="password" placeholder="Old Password" name="credentials[old]">
+            <input required type="password" placeholder="New Password" name="credentials[new]">
             <button type="submit">Change</button>
           </form>
         </section>
