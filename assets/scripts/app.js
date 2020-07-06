@@ -13,8 +13,9 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
-  $('#auth-two').hide()
+  // $('#auth-two').hide()
   $('#add-podcast').on('submit', podEvents.onAddPodcast)
+  $('#get-podcasts').on('submit', podEvents.onGetAllPods)
 })
 
 module.exports = {

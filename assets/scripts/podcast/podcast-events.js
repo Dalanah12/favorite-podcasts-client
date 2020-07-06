@@ -15,6 +15,15 @@ const onAddPodcast = function (event) {
     .catch(ui.addPodcastFailure)
 }
 
+const onGetAllPods = function (event) {
+  event.preventDefault()
+
+  api.getAllPods()
+    .then(ui.getAllPodsSuccess)
+    .catch(ui.getAllPodsFailure)
+}
+
 module.exports = {
-  onAddPodcast
+  onAddPodcast,
+  onGetAllPods
 }

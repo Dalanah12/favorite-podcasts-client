@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('./../store')
+const showPodsHandle = require('./../templates/podcast.handlebars')
 
 const addPodcastSuccess = function (response) {
   $('form').trigger('reset')
@@ -9,10 +10,21 @@ const addPodcastSuccess = function (response) {
 }
 
 const addPodcastFailure = function (response) {
-  $('pod-message').text('Oops! There was a mistake adding your podcast. Try Again!')
+  $('#pod-message').text('Oops! There was a mistake adding your podcast. Try Again!')
 }
 
+const getAllPodsSuccess = function (response) {
+  const showPodsHtml = showPodsHandle({ podcasts: response.podcast })
+  $('.content').html(showPodsHtml)
+  $('#pod-message').text('Here are you favorite podcasts!')
+}
+
+const getAllPodsFailure = function (response) {
+  $('#pod-message').text('Failed to show podcasts! Try Again!')
+}
 module.exports = {
   addPodcastSuccess,
-  addPodcastFailure
+  addPodcastFailure,
+  getAllPodsSuccess,
+  getAllPodsFailure
 }

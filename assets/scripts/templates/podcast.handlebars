@@ -1,0 +1,11 @@
+
+{{#each podcasts as |podcast|}}
+{{log podcast}}
+<section class="show-pods" data-id="{{podcast._id}}">
+  <div>Title:</div>{{podcast.title}}
+  <div>Host(s):</div>{{podcast.hosts}}
+  <div>Topic:</div>{{podcast.topic}}
+  <div>Current Rating:</div>{{podcast.rating}}
+</section>
+
+{{/each}}

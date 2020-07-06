@@ -22,6 +22,17 @@ const addPodcast = function (data) {
   })
 }
 
+const getAllPods = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/podcasts',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  addPodcast
+  addPodcast,
+  getAllPods
 }
