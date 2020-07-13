@@ -26,7 +26,6 @@ const onGetAllPods = function (event) {
 const onDeletePod = function (event) {
   event.preventDefault()
   const podcastId = $(event.target).data('id')
-  console.log(event)
   api.deletePodcast(podcastId)
     .then(() => ui.deletePodcastSuccess(podcastId))
     .catch(ui.deletePodcastFailure)
@@ -35,11 +34,8 @@ const onDeletePod = function (event) {
 const onUpdateRate = function (event) {
   event.preventDefault()
   const podcastId = $(event.target).data('id')
-  console.log(podcastId)
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
-  console.log('form on updateRate', form)
   api.updateRate(data, podcastId)
     .then(ui.onUpdateRateSuccess)
     .catch(ui.onUpdateRateFailure)

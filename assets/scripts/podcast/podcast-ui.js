@@ -32,7 +32,7 @@ const deletePodcastFailure = function () {
   $('#pod-message').text('Uh-Oh Delete Failed. Try Again!')
 }
 
-const onUpdateRateSuccess = function () {
+const onUpdateRateSuccess = function (podcastId) {
   $('#pod.message').text('Rating Updated!').fadeOut(1000)
 }
 
