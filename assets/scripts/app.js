@@ -18,7 +18,7 @@ $(() => {
   $('#add-podcast').on('submit', podEvents.onAddPodcast)
   $('#get-podcasts').on('submit', podEvents.onGetAllPods)
   $('.content').on('click', '.btn-danger', podEvents.onDeletePod)
-  $('#update').on('click', podEvents.onUpdateRates)
+  $('.content').on('submit', '.updateRate', podEvents.onUpdateRate)
 })
 
 module.exports = {

@@ -5,7 +5,7 @@ const showPodsHandle = require('./../templates/podcast.handlebars')
 
 const addPodcastSuccess = function (response) {
   $('form').trigger('reset')
-  $('#pod-message').text('Podcast added to your favorites!').fadeOut(900)
+  $('#pod-message').text('Podcast added to your favorites!').fadeOut(1000)
   store.podcast = response.podcast
 }
 
@@ -16,7 +16,7 @@ const addPodcastFailure = function (response) {
 const getAllPodsSuccess = function (response) {
   const showPodsHtml = showPodsHandle({ podcasts: response.podcasts })
   $('.content').html(showPodsHtml)
-  $('#pod-message').text('Here are you favorite podcasts!').fadeOut(900)
+  $('#pod-message').text('Here are you favorite podcasts!').fadeOut(1000)
 }
 
 const getAllPodsFailure = function (response) {
@@ -24,7 +24,7 @@ const getAllPodsFailure = function (response) {
 }
 
 const deletePodcastSuccess = function (podcastId) {
-  $('#pod-message').text('Podcast Successfully Deleted').fadeOut(900)
+  $('#pod-message').text('Podcast Successfully Deleted').fadeOut(1000)
   $(`[data-id='${podcastId}']`).remove()
 }
 
@@ -33,7 +33,7 @@ const deletePodcastFailure = function () {
 }
 
 const onUpdateRateSuccess = function () {
-  $('#pod.message').text('Rating Updated!').fadeOut(900)
+  $('#pod.message').text('Rating Updated!').fadeOut(1000)
 }
 
 const onUpdateRateFailure = function () {

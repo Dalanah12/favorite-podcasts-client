@@ -6,6 +6,10 @@
   <div><h3>Rating:</h3><h5>{{podcast.rating}}</h5></div>
   {{#if (checkOwner podcast.owner)}}
   <button type="submit" class="btn btn-danger" data-id="{{podcast._id}}">Delete</button>
+  <form class="updateRate" data-id="{{podcast._id}}">
+    <button type="submit" class="btn btn-outline-success btn-rounded waves-effect">Update</button>
+    <input required type="text" placeholder="Rating" name="podcast[rating]">
+  </form>
   {{/if}}
 </section>
 

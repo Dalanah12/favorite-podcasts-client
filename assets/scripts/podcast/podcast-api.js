@@ -32,9 +32,10 @@ const getAllPods = function (data) {
   })
 }
 
-const updateRate = function (data) {
+const updateRate = function (data, podcastId) {
+  console.log(data)
   return $.ajax({
-    url: config.apiUrl + '/podcasts/' + data.podcast.id,
+    url: config.apiUrl + '/podcasts/' + podcastId,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
