@@ -49,7 +49,7 @@ const updateRate = function (data) {
 
 const deletePodcast = function (podcastId) {
   return $.ajax({
-    url: config.apiUrl + '/podcasts' + podcastId,
+    url: config.apiUrl + '/podcasts/' + podcastId,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token

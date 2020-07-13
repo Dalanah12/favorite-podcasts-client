@@ -17,7 +17,7 @@ $(() => {
   $('#pod-one').hide()
   $('#add-podcast').on('submit', podEvents.onAddPodcast)
   $('#get-podcasts').on('submit', podEvents.onGetAllPods)
-  $('.content').on('click', '.btn btn-danger', podEvents.onDeletePod)
+  $('.content').on('click', '.btn-danger', podEvents.onDeletePod)
   $('#update').on('click', podEvents.onUpdateRates)
 })
 
