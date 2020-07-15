@@ -34,6 +34,7 @@ const deletePodcastFailure = function () {
 
 const onUpdateRateSuccess = function (podcastId) {
   $('#pod.message').text('Rating Updated!').fadeOut(1000)
+  $('form').trigger('reset')
 }
 
 const onUpdateRateFailure = function () {

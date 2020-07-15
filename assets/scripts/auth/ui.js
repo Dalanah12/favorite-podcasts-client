@@ -13,9 +13,8 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (response) {
-  console.log(response)
   $('form').trigger('reset')
-  $('#message').text('Successfully Signed In!').fadeOut(900)
+  $('#message').text('Successfully Signed In!').fadeOut(1000)
   store.user = response.user
   $('#auth-one').hide()
   $('#auth-two').show()
@@ -29,7 +28,7 @@ const onSignInFailure = function () {
 
 const onChangePasswordSuccess = function (response) {
   $('form').trigger('reset')
-  $('#message').text('Changed Password Successfully').fadeOut(900)
+  $('#message').text('Changed Password Successfully').fadeOut(1000)
 }
 
 const onChangePasswordFailure = function () {
@@ -39,7 +38,7 @@ const onChangePasswordFailure = function () {
 
 const onSignOutSuccess = function () {
   $('form').trigger('reset')
-  $('#message').text('Signed Out Successfully').fadeOut(900)
+  $('#message').text('Signed Out Successfully').fadeOut(1000)
   $('#auth-two').hide()
   $('#pod-one').hide()
   $('#auth-one').show()
