@@ -16,7 +16,7 @@ LIVE URL: https://dalanah12.github.io/favorite-podcasts-client/
 
 https://github.com/Dalanah12/favorite-podcasts-api
 
-Deployed API Link:
+Deployed API Link: https://infinite-forest-81647.herokuapp.com
 
 ## User Stories
 
