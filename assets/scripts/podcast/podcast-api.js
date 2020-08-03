@@ -22,22 +22,6 @@ const addPodcast = function (data) {
   })
 }
 
-const createReview = function (data, podcastId) {
-  return $.ajax({
-    url: config.apiUrl + '/podcasts/' + podcastId + '/reviews',
-    method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: {
-      reviews: {
-        title: data.podcast.title,
-        content: data.podcast.content
-      }
-    }
-  })
-}
-
 const getAllPods = function (data) {
   return $.ajax({
     url: config.apiUrl + '/podcasts',
@@ -70,6 +54,23 @@ const deletePodcast = function (podcastId) {
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const createReview = function (data, podcastId) {
+  console.log(data)
+  return $.ajax({
+    url: config.apiUrl + '/podcasts/' + podcastId + '/reviews',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      review: {
+        title: data.review.title,
+        content: data.review.content
+      }
     }
   })
 }

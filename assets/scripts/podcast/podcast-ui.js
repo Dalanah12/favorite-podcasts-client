@@ -41,8 +41,8 @@ const onUpdateRateFailure = function () {
   $('#pod-message').text('Rating Update Unsuccessful. Try Again')
 }
 
-const addReviewSuccess = (response) => {
-  const showPodsHtml = showPodsHandle({ reviews: response.reviews })
+const addReviewSuccess = (data) => {
+  const showPodsHtml = showPodsHandle({ reviews: data.reviews })
   $('form').trigger('reset')
   $('.content').html(showPodsHtml)
 }
