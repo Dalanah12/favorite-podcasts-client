@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Favorite Podcasts</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>THE POD REVIEW</h1>
+      <br>
+      <p id="message"></p>
+      <p id="pod-message"></p>
+        <section id="auth-one">
+          <form id="sign-up">
+            <h3>Sign Up</h3>
+            <input required type="text" placeholder="Email" name="credentials[email]">
+            <input required type="password" placeholder="Password" name="credentials[password]">
+            <input required type="password" placeholder="Confirm Password" name="credentials[password_confirmation]">
+            <button type="submit">Sign Up</button>
+          </form>
+          <br>
+          <form id="sign-in">
+            <h3>Sign In</h3>
+            <input required type="text" placeholder="Email" name="credentials[email]">
+            <input required type="password" placeholder="Password" name="credentials[password]">
+            <button type="submit">Sign In</button>
+          </form>
+        </section>
+        <section id="auth-two">
+        <form id="change-password">
+          <h3>Change Password</h3>
+          <input required type="password" placeholder="Old Password" name="credentials[old]">
+          <input required type="password" placeholder="New Password" name="credentials[new]">
+          <button type="submit">Change</button>
+        </form>
+          <form id="sign-out">
+            <button type="submit">Sign Out</button>
+          </form>
+        </section>
+      <section id="pod-one">
+        <form id="add-podcast">
+        <h2>What are you listening to?</h2>
+        <input required type="text" placeholder="Title" name="podcast[title]">
+        <input required type="text" placeholder="Host(s)" name="podcast[hosts]">
+        <input required type="text" placeholder="Topic" name="podcast[topic]">
+        <input required type="number" placeholder="Rating" name="podcast[rating]">
+        <button type="submit" class="btn btn-success btn-rounded">Add!</button>
+      </form>
+      <br>
+      <!-- <form id="update">
+        <h2>Change Rating</h2>
+        <input required type="text" placeholder="New Rating" name="podcast[rating]">
+        <button type="submit">Change</button>
+      </form> -->
+      <!-- <form id="delete">
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form> -->
+      <form id="get-podcasts">
+        <button type="submit" class="btn btn-outline-success btn-rounded waves-effect">My Favorite Pods</button>
+      </form>
+      <br>
+      <!-- <form id="clear-pods">
+        <button type="submit" class="btn btn-outline-warning btn-rounded waves-effect">Hide Podcasts</button>
+      </form> -->
+      </section>
+      <main>
+        <div id="content" class="content"></div>
+      </main>
+    </body>
+</html>
