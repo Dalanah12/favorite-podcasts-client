@@ -4,6 +4,11 @@
   <div><h3>Host(s):</h3><h5>{{podcast.hosts}}</h5></div>
   <div><h3>Topic:</h3><h5>{{podcast.topic}}</h5></div>
   <div><h3>Rating:</h3><h5>{{podcast.rating}}</h5></div>
+  <form class="addReview" data-id="{{podcast._id}}">
+    <button type="submit" class="btn btn-outline-success btn-rounded waves-effect">Add Review</button>
+    <input required type="text" placeholder="Title" name="podcast[review]">
+    <input required type="text" placeholder="Review" name="podcast[review]">
+  </form>
   {{#if (checkOwner podcast.owner)}}
   <button type="submit" class="btn btn-danger" data-id="{{podcast._id}}">Delete</button>
   <form class="updateRate" data-id="{{podcast._id}}">
@@ -11,6 +16,16 @@
     <input required type="text" placeholder="Rating" name="podcast[rating]">
   </form>
   {{/if}}
+  {{#each reviews as |review|}}
+<p>
+{{#if review.title}}
+  {{review.title}}
+    {{review.content}}
+  {{else}}
+    No Reviews.
+  {{/if}}
+  {{/each}}
 </section>
+
 
 {{/each}}

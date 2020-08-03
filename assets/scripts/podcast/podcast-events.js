@@ -15,6 +15,16 @@ const onAddPodcast = function (event) {
     .catch(ui.addPodcastFailure)
 }
 
+const onCreateReview = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  const podcastId = $(event.target).data('id')
+  api.createReview(data, podcastId)
+    .then(ui.onCreateReviewSuccess)
+    .catch(ui.onCreateReviewFailure)
+}
+
 const onGetAllPods = function (event) {
   event.preventDefault()
 
@@ -44,5 +54,6 @@ module.exports = {
   onAddPodcast,
   onGetAllPods,
   onDeletePod,
-  onUpdateRate
+  onUpdateRate,
+  onCreateReview
 }

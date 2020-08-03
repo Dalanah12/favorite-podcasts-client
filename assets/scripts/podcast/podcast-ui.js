@@ -41,6 +41,12 @@ const onUpdateRateFailure = function () {
   $('#pod-message').text('Rating Update Unsuccessful. Try Again')
 }
 
+const addReviewSuccess = (response) => {
+  const showPodsHtml = showPodsHandle({ reviews: response.reviews })
+  $('form').trigger('reset')
+  $('.content').html(showPodsHtml)
+}
+
 module.exports = {
   addPodcastSuccess,
   addPodcastFailure,
@@ -49,5 +55,6 @@ module.exports = {
   deletePodcastSuccess,
   deletePodcastFailure,
   onUpdateRateSuccess,
-  onUpdateRateFailure
+  onUpdateRateFailure,
+  addReviewSuccess
 }
